@@ -4,13 +4,13 @@ import Head from "next/head";
 import { Date } from "../date";
 import Link from "next/link";
 
-export const PostTemplate = ({ children, postData }) => {
+export const PostTemplate = ({ postData }) => {
   return (
     <>
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <Layout>
+      <Layout page="PostTemplate">
         <h1>{postData.title}</h1>
         <Date dateString={postData.date} />
         <div

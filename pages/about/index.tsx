@@ -9,7 +9,7 @@ const About = () => {
     console.log(alertColor);
   };
   return (
-    <Layout>
+    <Layout page="About">
       <Head>
         <title>about</title>
       </Head>

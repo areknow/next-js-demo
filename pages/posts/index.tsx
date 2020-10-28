@@ -2,10 +2,11 @@ import { Layout } from "../../components/layout";
 import Head from "next/head";
 import Link from "next/link";
 import { getSortedPostsData } from "../../lib/posts";
+import { GetStaticProps } from "next";
 
 const Posts = ({ allPostsData }) => {
   return (
-    <Layout>
+    <Layout page="Posts">
       <Head>
         <title>posts</title>
       </Head>
@@ -27,7 +28,7 @@ const Posts = ({ allPostsData }) => {
 };
 export default Posts;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
