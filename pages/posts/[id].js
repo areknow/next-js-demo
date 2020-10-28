@@ -1,24 +1,23 @@
-import PostTemplate from "../../components/post-template/post-template";
+import { PostTemplate } from "../../components/post-template/post-template";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
-export default function Post({ postData }) {
+const Post = ({ postData }) => {
   return <PostTemplate postData={postData}></PostTemplate>;
-}
+};
+export default Post;
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   const paths = getAllPostIds();
   return {
     paths,
     fallback: false,
   };
-}
-
-export async function getStaticProps({ params }) {
-  console.log(params);
+};
+export const getStaticProps = async ({ params }) => {
   const postData = getPostData(params.id);
   return {
     props: {
       postData,
     },
   };
-}
+};

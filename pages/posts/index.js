@@ -1,9 +1,9 @@
-import Layout from "../../components/layout/layout";
+import { Layout } from "../../components/layout/layout";
 import Head from "next/head";
 import Link from "next/link";
 import { getSortedPostsData } from "../../lib/posts";
 
-export default function Posts({ allPostsData }) {
+const Posts = ({ allPostsData }) => {
   return (
     <Layout>
       <Head>
@@ -24,13 +24,14 @@ export default function Posts({ allPostsData }) {
       </ul>
     </Layout>
   );
-}
+};
+export default Posts;
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};

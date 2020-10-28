@@ -1,7 +1,7 @@
-import Layout from "../../components/layout/layout";
+import { Layout } from "../../components/layout/layout";
 import styles from "./post-template.module.scss";
 
-export default function PostTemplate({ children, postData }) {
+export const PostTemplate = ({ children, postData }) => {
   return (
     <Layout>
       <h1>{postData.title}</h1>
@@ -9,4 +9,4 @@ export default function PostTemplate({ children, postData }) {
       <div className={styles.content}>{postData.content}</div>
     </Layout>
   );
-}
+};

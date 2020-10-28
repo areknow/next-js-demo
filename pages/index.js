@@ -1,15 +1,15 @@
 import Head from "next/head";
-import Layout from "../components/layout/layout";
+import { Layout } from "../components/layout/layout";
 
-export default function Home() {
+const Home = () => {
   return (
-    <>
-      <Layout home>
-        <Head>
-          <title>home</title>
-        </Head>
-        <h1>home</h1>
-      </Layout>
-    </>
+    <Layout home>
+      <Head>
+        <title>home</title>
+      </Head>
+      <h1>home</h1>
+    </Layout>
   );
-}
+};
+
+export default Home;

@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./nav.module.scss";
 import { useRouter } from "next/router";
 
-const Nav = () => {
+export const Nav = () => {
   const router = useRouter();
 
   return (
@@ -27,5 +27,3 @@ const Nav = () => {
     </nav>
   );
 };
-
-export default Nav;

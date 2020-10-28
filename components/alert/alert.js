@@ -1,7 +1,7 @@
 import styles from "./alert.module.scss";
 import cn from "classnames";
 
-export default function Alert({ children, type }) {
+export const Alert = ({ children, type }) => {
   return (
     <div
       className={cn({
@@ -12,4 +12,4 @@ export default function Alert({ children, type }) {
       {children}
     </div>
   );
-}
+};
