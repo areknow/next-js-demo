@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { Layout } from "../../components/layout/layout";
-import { Alert } from "../../components/alert/alert";
+import { Layout } from "../../components/layout";
+import { Alert } from "../../components/alert";
 
 const About = () => {
   let alertColor = "error";

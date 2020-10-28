@@ -1,4 +1,4 @@
-import { PostTemplate } from "../../components/post-template/post-template";
+import { PostTemplate } from "../../components/post-template/";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
 const Post = ({ postData }) => {

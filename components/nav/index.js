@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./nav.module.scss";
+import styles from "./style.module.scss";
 import { useRouter } from "next/router";
 
 export const Nav = () => {

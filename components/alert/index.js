@@ -1,4 +1,4 @@
-import styles from "./alert.module.scss";
+import styles from "./style.module.scss";
 import cn from "classnames";
 
 export const Alert = ({ children, type }) => {
