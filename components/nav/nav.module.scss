@@ -1,0 +1,29 @@
+.nav {
+  background: rgb(218, 218, 218);
+  max-width: 36rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+    li.active {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background: rgb(15, 8, 109);
+      }
+    }
+  }
+}
