@@ -6,7 +6,10 @@ export const PostTemplate = ({ children, postData }) => {
     <Layout>
       <h1>{postData.title}</h1>
       <h2>{postData.date}</h2>
-      <div className={styles.content}>{postData.content}</div>
+      <div
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: postData.content }}
+      />
     </Layout>
   );
 };
