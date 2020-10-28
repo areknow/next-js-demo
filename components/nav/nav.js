@@ -3,22 +3,20 @@ import styles from "./nav.module.scss";
 import { useRouter } from "next/router";
 
 export const Nav = () => {
-  const router = useRouter();
-
   return (
     <nav className={styles.nav}>
       <ul>
-        <li className={router.pathname == "/" ? styles.active : ""}>
+        <li className={checkIfActive("/")}>
           <Link href="/">
             <a>home</a>
           </Link>
         </li>
-        <li className={router.pathname == "/about" ? styles.active : ""}>
+        <li className={checkIfActive("/about")}>
           <Link href="/about">
             <a>about</a>
           </Link>
         </li>
-        <li className={router.pathname == "/posts" ? styles.active : ""}>
+        <li className={checkIfActive("/posts")}>
           <Link href="/posts">
             <a>posts</a>
           </Link>
@@ -26,4 +24,11 @@ export const Nav = () => {
       </ul>
     </nav>
   );
+};
+
+const checkIfActive = (name) => {
+  const router = useRouter();
+  if (router.pathname.split("/")[1] == name.split("/")[1]) {
+    return styles.active;
+  }
 };
