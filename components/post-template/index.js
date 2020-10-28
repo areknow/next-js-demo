@@ -2,6 +2,7 @@ import { Layout } from "../layout";
 import styles from "./style.module.scss";
 import Head from "next/head";
 import { Date } from "../date";
+import Link from "next/link";
 
 export const PostTemplate = ({ children, postData }) => {
   return (
@@ -16,11 +17,10 @@ export const PostTemplate = ({ children, postData }) => {
           className={styles.content}
           dangerouslySetInnerHTML={{ __html: postData.content }}
         />
+        <Link href="/posts">
+          <a>&laquo; back</a>
+        </Link>
       </Layout>
     </>
   );
-};
-
-const formatDate = (date) => {
-  return;
 };
